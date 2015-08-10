@@ -1,20 +1,32 @@
 using UnityEngine;
 using System.Collections;
+using System.Threading;
 	
 public class GrowShrink : MonoBehaviour {
 	public bool isLarge = false;
-	void Update() {
-		if (Input.GetKeyDown("q")) {
-			if (isLarge == true) {
-				transform.localScale = new Vector3(1F,1F,1F);
-				isLarge = false;
-				print ("Scaled to small");
+	//Do the growing/shrinking
+	void doGrowShrink(bool sizeIsLarge) {
+		if (sizeIsLarge == true) {
+			if (transform.localScale.x < 80F) {
+				transform.localScale += new Vector3(1F,1F,1F);
 			}
 			else {
-				transform.localScale = new Vector3(60F,60F,60F);
-				isLarge = true;
-				print ("Scaled to large");
 			}
 		}
+		if (sizeIsLarge == false) {
+			if (transform.localScale.x > 1F) {
+				transform.localScale -= new Vector3(1F,1F,1F);
+			}
+			else {
+			}
+		}
+	}
+	//Check for Q and if so, toggle isLarge
+	void FixedUpdate() {
+		if (Input.GetKeyDown("q")) {
+			print("Changing size");
+			isLarge = !isLarge;
+		}
+		doGrowShrink(isLarge);
 	}
 }
