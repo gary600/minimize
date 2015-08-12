@@ -3,7 +3,7 @@ using System.Collections;
 using System.Threading;
 	
 public class GrowShrink : MonoBehaviour {
-	public bool isLarge = false;
+	public bool isLarge = true;
 	//Do the growing/shrinking
 	void doGrowShrink(bool sizeIsLarge) {
 		if (sizeIsLarge == true) {
