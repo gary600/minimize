@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c99ed2e4643b54259a762cc3cf1fda34
 timeCreated: 1439397820
+=======
+<<<<<<< HEAD:Assets/Textures/paper.xcf.meta
+guid: b3a359194d13c9c4391f89456f3f5705
+timeCreated: 1439398003
+=======
+guid: 08b3121be10fe4b56b3bb5bc4206b152
+timeCreated: 1439397920
+>>>>>>> origin/master:Assets/Textures/paper.xcf.meta
+>>>>>>> origin/master
 licenseType: Free
 DefaultImporter:
   userData: 
